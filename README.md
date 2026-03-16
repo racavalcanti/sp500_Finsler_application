@@ -29,22 +29,31 @@ The resulting distance matrix is used to build **simplicial complexes**, allowin
 
 # Finsler Metric
 
-The distance between two vectors (p) and (q) is defined as
+## Finsler-Type Metric
 
-[
-M =
+Given two vectors $p,q \in \mathbb{R}^n$, we define the distance
+
+$$
+M(p,q) =
 \left(
-\sum f_{\text{ref}}(p_i) |q_i - p_i|^\alpha
-\right)^{1/\alpha}
+\sum_{i=1}^{n}
+f_{\mathrm{ref}}(p_i), |q_i - p_i|^{\alpha}
+\right)^{\frac{1}{\alpha}}
 +
-\sum g_{\text{ref}}(\alpha, p_i), f_{\text{ref}}(p_i)^{1/\alpha} (q_i - p_i)
-]
+\sum_{i=1}^{n}
+g_{\mathrm{ref}}(\alpha, p_i),
+f_{\mathrm{ref}}(p_i)^{\frac{1}{\alpha}}
+(q_i - p_i)
+$$
 
 where
 
-* (f_{\text{ref}}) weights the reference vector
-* (g_{\text{ref}}) introduces an asymmetric correction
-* (\alpha) controls the norm behavior
+* $f_{\mathrm{ref}}$ is a weighting function associated with the reference vector
+* $g_{\mathrm{ref}}$ is a correction function introducing directional asymmetry
+* $\alpha > 0$ controls the generalized norm behavior
+
+The first term represents a **weighted $L^\alpha$-type distance**, while the second term introduces a **directional correction**, giving the metric a **Finsler-type geometric structure**.
+
 
 This produces a **Finsler-type geometry**, allowing more flexible modeling of financial data than standard metrics.
 
