@@ -103,7 +103,7 @@ This approach allows detection of:
 
 ```
 .
-├── stock_tda.ipynb        # Main notebook with experiments
+├── return_stock.ipynb        # Main notebook with experiments
 ├── data/                  # (Optional) stock price datasets
 ├── figures/               # Generated plots
 └── README.md
